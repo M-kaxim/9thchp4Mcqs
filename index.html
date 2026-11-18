@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chapter 4 MCQ Quiz – Data and Analysis</title>
+<style>
+:root{--bg:#eef2ff;--card:#fff;--tx:#1e2340;--mu:#6b7194;--pr:#5b5bf0;--pr2:#8b5cf6;--ok:#16a34a;--okb:#dcfce7;--no:#dc2626;--nob:#fee2e2;--bd:#e2e6f5;--sc:#fff7e0;--scb:#f4b400;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12142a;--card:#1c1f3d;--tx:#eceefc;--mu:#9aa0c8;--bd:#2c3060;--okb:#12391f;--nob:#411a1a;--sc:#35290a}}
+:root[data-theme="dark"]{--bg:#12142a;--card:#1c1f3d;--tx:#eceefc;--mu:#9aa0c8;--bd:#2c3060;--okb:#12391f;--nob:#411a1a;--sc:#35290a}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
+background-image:radial-gradient(circle at 10% 0,rgba(91,91,240,.18),transparent 40%),radial-gradient(circle at 100% 100%,rgba(139,92,246,.18),transparent 40%)}
+.wrap{max-width:760px;margin:0 auto;padding:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:24px;box-shadow:0 10px 40px rgba(60,60,140,.12)}
+.hide{display:none!important}
+h1{margin:6px 0 4px;font-size:1.7rem;line-height:1.2}.mu{color:var(--mu)}
+.logo{width:72px;height:72px;border-radius:22px;background:linear-gradient(135deg,var(--pr),var(--pr2));display:grid;place-items:center;font-size:2.2rem;margin:0 auto 10px;box-shadow:0 8px 20px rgba(91,91,240,.4)}
+#start{text-align:center;margin-top:6vh}
+label{display:block;text-align:left;font-weight:600;font-size:.9rem;margin:16px 0 6px}
+input{width:100%;padding:14px 16px;border-radius:14px;border:2px solid var(--bd);background:var(--bg);color:var(--tx);font-size:1rem;outline:none}
+input:focus{border-color:var(--pr)}
+.btn{border:0;cursor:pointer;font-weight:700;font-size:1rem;padding:14px 22px;border-radius:14px;color:#fff;background:linear-gradient(135deg,var(--pr),var(--pr2));box-shadow:0 6px 18px rgba(91,91,240,.35);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.ghost{background:var(--bg);color:var(--tx);box-shadow:none;border:2px solid var(--bd)}
+.btn.full{width:100%;margin-top:22px}.err{color:var(--no);font-size:.85rem;min-height:1.2em;margin-top:8px}
+.facts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:14px 0}.facts span{background:var(--bg);border:1px solid var(--bd);padding:6px 12px;border-radius:99px;font-size:.8rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;font-size:.85rem}
+.who{font-weight:700}.pill{background:var(--card);border:1px solid var(--bd);border-radius:99px;padding:6px 12px;font-weight:600}
+.bar{height:10px;background:var(--bd);border-radius:9px;overflow:hidden;margin-bottom:14px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pr),var(--pr2));transition:width .4s}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;padding:4px 10px;border-radius:99px;background:var(--bg);color:var(--pr);margin-bottom:10px}
+.scn{background:var(--sc);border-left:5px solid var(--scb);padding:12px 14px;border-radius:12px;margin-bottom:14px;font-size:.95rem;line-height:1.5}
+.scn b{display:block;font-size:.72rem;letter-spacing:.08em;color:#b07d00;margin-bottom:4px}
+.q{font-size:1.2rem;font-weight:700;line-height:1.4;margin:0 0 16px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:13px 14px;margin-bottom:10px;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--tx);font-size:1rem;cursor:pointer;transition:.15s}
+.opt:hover:not(:disabled){border-color:var(--pr);transform:translateX(3px)}
+.opt b{flex:none;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--bg);color:var(--pr)}
+.opt:disabled{cursor:default;color:var(--tx)}
+.opt.ok{background:var(--okb);border-color:var(--ok)}.opt.ok b{background:var(--ok);color:#fff}
+.opt.no{background:var(--nob);border-color:var(--no)}.opt.no b{background:var(--no);color:#fff}
+.fb{margin:6px 0 0;padding:12px 14px;border-radius:12px;font-weight:600}.fb.ok{background:var(--okb);color:var(--ok)}.fb.no{background:var(--nob);color:var(--no)}
+.nav{display:flex;gap:10px;justify-content:space-between;margin-top:18px}
+.idx{margin-top:16px}.idx h3{margin:12px 0 8px;font-size:.85rem;color:var(--mu)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:7px}
+.grid button{height:40px;border-radius:11px;border:2px solid var(--bd);background:var(--card);color:var(--tx);font-weight:700;cursor:pointer}
+.grid .c{background:var(--ok);border-color:var(--ok);color:#fff}.grid .w{background:var(--no);border-color:var(--no);color:#fff}.grid .cur{outline:3px solid var(--pr);outline-offset:2px}
+.legend{display:flex;gap:14px;font-size:.75rem;color:var(--mu);margin-top:10px;flex-wrap:wrap}
+#res{text-align:center}.ring{width:170px;height:170px;border-radius:50%;margin:14px auto;display:grid;place-items:center;background:conic-gradient(var(--pr) calc(var(--p)*1%),var(--bd) 0)}
+.ring div{width:134px;height:134px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:2.2rem;font-weight:800}
+.msg{font-size:1.15rem;font-weight:700;margin:8px 0 4px}.stats{display:flex;gap:10px;justify-content:center;margin:16px 0;flex-wrap:wrap}
+.stats div{background:var(--bg);border:1px solid var(--bd);border-radius:14px;padding:10px 16px;min-width:96px}.stats b{display:block;font-size:1.3rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="start" class="card">
+  <div class="logo">📊</div>
+  <h1>Data and Analysis</h1>
+  <div class="mu">Computer Science IX · Chapter 4 · MCQ Quiz</div>
+  <div class="facts"><span>📝 120 MCQs</span><span>🧩 10 Scenarios</span><span>✅ Instant answers</span></div>
+  <label for="nm">Student name</label><input id="nm" placeholder="Enter your full name" autocomplete="name">
+  <label for="rl">Roll number</label><input id="rl" placeholder="Enter your roll number" inputmode="numeric">
+  <div class="err" id="err"></div>
+  <button class="btn full" id="go">Start Quiz →</button>
+</section>
+
+<section id="quiz" class="hide">
+  <div class="top"><span class="who" id="who"></span><span class="pill" id="sc">Score 0</span></div>
+  <div class="bar"><i id="pb"></i></div>
+  <div class="card">
+    <span class="tag" id="tag"></span>
+    <div class="scn hide" id="scn"><b>🧩 SCENARIO</b><span id="stx"></span></div>
+    <p class="q" id="qt"></p>
+    <div id="ops"></div>
+    <div class="fb hide" id="fb"></div>
+    <div class="nav"><button class="btn ghost" id="pv">← Back</button><button class="btn ghost" id="ix">☰ Index</button><button class="btn" id="nx">Next →</button></div>
+    <div class="idx hide" id="idx"></div>
+  </div>
+</section>
+
+<section id="res" class="card hide">
+  <div class="logo">🏆</div>
+  <h1 id="rn"></h1><div class="mu" id="rr"></div>
+  <div class="ring" id="ring"><div id="pc"></div></div>
+  <div class="msg" id="ms"></div><div class="mu" id="ms2"></div>
+  <div class="stats"><div><b id="sa"></b>Correct</div><div><b id="sb"></b>Wrong</div><div><b id="sct"></b>Total</div></div>
+  <div class="nav"><button class="btn ghost" id="rv">Review answers</button><button class="btn" id="rs">Try again ↻</button></div>
+</section>
+</div>
+
+<script>
+const N=[["Data is a collection of:",["Only programs","Only hardware","Only passwords","Facts or information"],3],["Examining data to find patterns and conclusions is called:",["Data analytics","Data entry","Data deletion","Data hiding"],0],["Recording hourly temperature values in an experiment gives:",["A conclusion","Data","A program","A database"],1],["Concluding from a graph that it got warmer during the day is:",["Data analysis","Data collection","Data storage","Data loss"],0],["Data analytics can be quantitative and:",["Only visual","Only audio","Hardware based","Qualitative"],3],["Data science uses programming along with:",["Cooking","Painting","Mathematics and statistics","Typing speed"],2],["Data is the information we collect; data analytics is:",["The way we delete it","A type of storage","A type of hardware","The way we study it for meaning"],3],["Data science is a(n) ___ field:",["Single-subject","Interdisciplinary","Hardware only","Printing"],1],["Data science works like a pipeline from data to:",["Insights","Hardware","Passwords","Printers"],0],["Structured data is in the form of:",["Audio","Video","Tables","Tweets"],2],["Which is unstructured data?",["Spreadsheet","Database table","Video","Sorted table"],2],["A collection of brain CT scans of patients is a:",["Browser","Printer","Virus","Dataset"],3],["Statistics is the analysis of:",["Likelihood of future events","Frequency of past events","Hardware speed","Network traffic"],1],["Probability is used to predict:",["Past events","Hardware faults","File sizes","Likelihood of future events"],3],["Which part of data science simplifies complex data into clear results?",["Printing","Mathematics","Typing","Gaming"],1],["Machine learning is a branch of:",["Hardware design","Network cables","Web design","Artificial Intelligence"],3],["Machine learning uses data and algorithms to imitate:",["Human learning","Printers","Weather","Cables"],0],["Deep learning is a subset of:",["Hardware","Databases","Machine learning","Networking"],2],["Deep learning uses:",["Spreadsheets only","Printers","Keyboards","Artificial neural networks"],3],["Discovering patterns in existing datasets is the focus of:",["Data entry","Data hiding","Data loss","Data mining"],3],["Graphical representation of data using charts and plots is:",["Data mining","Data visualization","NLP","Big data"],1],["Using historical data to predict future trends is:",["Data deletion","Data entry","Data storage","Predictive analysis"],3],["NLP studies the interaction between:",["Hardware and software","Data and cables","Human language and computers","Users and printers"],2],["Common uses of NLP are chatbots, translators and:",["Disk cleaning","Hardware repair","Sentiment analysis","Wiring"],2],["Handling very large volumes of data to find patterns is:",["Big data","Small data","A dataset","Data entry"],0],["Finding whether a customer review is positive, negative or neutral is:",["Data mining","Sentiment analysis","Fraud detection","Data storage"],1],["Foreseeing delays of flights or trains uses:",["Sentiment analysis","Hardware repair","Typing","Predictive analysis"],3],["Choosing the best shipping routes is a problem solved by:",["Data science","Hardware only","Typing","Painting"],0],["A business problem is a gap between:",["Existing and desired state","Two computers","Two files","Two networks"],0],["Optimizing inventory by demand forecasting is used in:",["Weather reporting","Consumer goods","Hardware design","Typing"],1],["Route optimization and real-time tracking are used by:",["Schools","Logistic companies","Bakeries","Libraries"],1],["Algorithmic trading and market sentiment analysis are used in:",["Stock markets","Libraries","Hospitals","Bakeries"],0],["Recommendation systems and shopping cart analysis help:",["Farming","Painting","Mining only","E-commerce"],3],["Data is mainly classified into qualitative and:",["Structured","Quantitative","Primary","Digital"],1],["Qualitative data is also called:",["Numerical data","Discrete data","Categorical data","Continuous data"],2],["Data that cannot be represented in numerical form is:",["Qualitative","Quantitative","Discrete","Continuous"],0],["Qualitative data is divided into ordinal and:",["Discrete","Continuous","Numeric","Nominal"],3],["Data with a specific order or ranking is:",["Ordinal","Nominal","Discrete","Continuous"],0],["Test grades are an example of ___ data:",["Nominal","Discrete","Continuous","Ordinal"],3],["Data with no meaningful order, like car, bus or train, is:",["Ordinal","Discrete","Nominal","Continuous"],2],["Which is nominal data?",["Military rank","Test grades","City","Economic status"],2],["Numeric data that can be computed mathematically is:",["Quantitative","Qualitative","Nominal","Ordinal"],0],["Quantitative data is divided into discrete and:",["Ordinal","Nominal","Continuous","Categorical"],2],["Data that can be counted and has finite values is:",["Continuous","Discrete","Nominal","Ordinal"],1],["Daily wind speed is an example of ___ data:",["Discrete","Nominal","Continuous","Ordinal"],2],["Data collected directly through surveys and interviews is:",["Secondary data","Big data","Old data","Primary data"],3],["Data taken from previously recorded data is:",["Primary data","Secondary data","Live data","Raw data"],1],["Collecting tweets on a topic is a data source of type:",["Sensor","Survey","Interview","Website"],3],["Seismic data about earthquakes is collected using:",["Sensors","Surveys","Websites","Interviews"],0],["A structured, organized collection of data is a:",["Browser","Printer","Router","Dataset"],3],["An organized collection of data stored in multiple tables is a:",["Chart","Survey","Keyboard","Database"],3],["DBMS stands for:",["Data Base Mining System","Digital Backup Management System","Database Management System","Data Basic Menu System"],2],["A DBMS is the interface between the database and:",["The printer","The keyboard","The monitor","The end user"],3],["Relational databases store data in:",["Key-value pairs only","Tables","Graphs only","Audio files"],1],["Which is a relational DBMS?",["MongoDB","Cassandra","MySQL","Hadoop"],2],["Before database systems, computer scientists used:",["Cloud storage","Blockchain","Hadoop","File management systems"],3],["The first database management system was developed in the:",["1960s","1990s","1980s","2000s"],0],["In a supermarket, products with less shelf life are placed:",["On easily accessible shelves","On hidden shelves","In the back store","On the top-most shelf"],0],["Supermarket sales were highest in the months of:",["Exams","Festivals","Winter only","Summer only"],1],["In a statistical investigation, data collection is the ___ step:",["Last","First","Middle","Optional"],1],["A respondent is a person:",["From whom information is collected","Who conducts the enquiry","Who repairs computers","Who writes software"],0],["Which is a primary data collection method?",["Published books","Research papers","Government records","Interviews"],3],["Which is a secondary data collection method?",["Experiments","Published sources","Interviews","Sensors"],1],["A person who conducts a statistical enquiry is an:",["Investigator","Enumerator","Respondent","Programmer"],0],["People who help the investigator collect information are:",["Enumerators","Respondents","Programmers","Managers"],0],["Which is a challenge of big data?",["Faster speed","Cheaper storage","Easy integration","Data security and privacy"],3],["Which is a data storage method?",["Keyboard","Printer","Data warehouse","Monitor"],2],["Which elements help in data visualization?",["Cables","Keys","Fans","Charts and graphs"],3],["Summary statistics may include minimum, maximum and:",["Wi-Fi speed","Screen size","Standard deviation","Disk color"],2],["Summary statistics give a quick overview of:",["Hardware","Characteristics of data","Software bugs","Networks"],1],["Summary statistics help in data cleaning, preprocessing, feature selection and:",["Printing","Typing","Wiring","Data visualization"],3],["The three Vs of big data are volume, velocity and:",["Value","Validity","Variety","Version"],2],["Volume refers to the ___ of data:",["Speed","Format","Quality","Amount"],3],["Velocity refers to the ___ of data:",["Amount","Speed","Format","Color"],1],["Variety refers to the ___ of data:",["Speed","Amount","Formats and types","Cost"],2],["Which is semi-structured data?",["JSON","Images","Videos","Audio"],0],["Hadoop is:",["A search engine","A database table","An antivirus","An open-source framework for big data"],3],["The term big data emerged in the early:",["1960s","1980s","2000s","2020s"],2],["Predicting when equipment is likely to fail is:",["Product development","Predictive maintenance","Fraud detection","Data entry"],1],["Poor quality of data may lead to:",["Faster results","Lower storage","Misleading insights","Better accuracy"],2]];
+const S=[["Sara records the temperature every hour in a science experiment. She draws a graph and sees that it got warmer as the day went on.",[["The recorded temperature values are:",["Data","A conclusion","Software","Hardware"],0],["Drawing a graph to study the values is:",["Data analysis","Data entry","Data loss","Data hiding"],0],["Temperature values are ___ data:",["Nominal","Ordinal","Unstructured","Quantitative"],3],["\"It got warmer\" is the:",["Raw data","Database","Sensor","Result of analysis"],3]]],["A school survey records students' favourite colour, test grade (A, B, C), number of students in each class and their heights.",[["Favourite colour is ___ data:",["Ordinal","Nominal","Discrete","Continuous"],1],["Test grade (A, B, C) is ___ data:",["Nominal","Discrete","Continuous","Ordinal"],3],["Number of students in a class is ___ data:",["Continuous","Discrete","Nominal","Ordinal"],1],["Height of students is ___ data:",["Discrete","Nominal","Ordinal","Continuous"],3]]],["Ahmed asks his classmates about their favourite subject using a questionnaire. Later he reads a research paper and a government report on the same topic.",[["The questionnaire is ___ data collection:",["Secondary","Big","Primary","Mining"],2],["The research paper and government report give:",["Primary data","Live data","Secondary data","Sensor data"],2],["The classmates who answer are the:",["Investigators","Enumerators","Analysts","Respondents"],3],["Ahmed, who conducts the enquiry, is the:",["Investigator","Respondent","Database","Sensor"],0]]],["A supermarket stores all its purchases in a database. Sales data shows festival months have the highest income, so the owner stocks more food and clothes before festivals.",[["The database is managed using a:",["Printer","DBMS","Browser","Chatbot"],1],["The highest sales were found in:",["Exam months","Random months","Festival months","No month"],2],["Stocking more before festivals uses:",["Data deletion","Predictive analysis","Hardware repair","Typing"],1],["Items with short shelf life should be placed:",["On easily accessible shelves","On hidden shelves","In the back store","In a far corner"],0]]],["A video app receives millions of new videos and comments every second in formats such as text, images and JSON, and must process them quickly.",[["The huge amount of data is called:",["Velocity","Volume","Variety","Version"],1],["The fast rate at which data arrives is:",["Velocity","Volume","Variety","Value"],0],["Text, images and JSON show:",["Volume","Velocity","Variety","Validity"],2],["Videos and images are:",["Structured data","Unstructured data","Discrete data","Nominal data"],1]]],["Wearable devices send patient data to health records in real time. Doctors use it to predict epidemic outbreaks and alert patients early.",[["This is an application of big data in:",["Healthcare","Media","Manufacturing","Government"],0],["Predicting epidemic outbreaks uses:",["Data entry","Typing","Big data","Printing"],2],["Wearable devices and sensors are examples of:",["IoT devices","Books","Surveys","Interviews"],0],["Real-time alerting helps to:",["Prevent serious conditions","Slow treatment","Delete data","Print reports"],0]]],["A factory uses data from machines to predict when a machine may fail, so it is repaired before it stops. This also saves energy and improves product quality.",[["This is called:",["Sentiment analysis","Predictive maintenance","Data hiding","Fraud detection"],1],["Its main benefit is to:",["Increase failures","Slow production","Avoid unexpected breakdowns","Reduce products"],2],["This is big data in:",["Media","Manufacturing","Government","Healthcare"],1],["Machines that produce continuous data are:",["Interviews","Books","IoT devices","Newspapers"],2]]],["An online store reads thousands of customer reviews to find out if they are positive, negative or neutral. It also uses a chatbot to answer customers' questions.",[["Studying the reviews is:",["Data storage","Sentiment analysis","Data deletion","Hardware repair"],1],["A chatbot uses:",["Data warehouse","NLP","Sensors","Blockchain"],1],["A review being negative or positive is ___ data:",["Discrete","Continuous","Qualitative","Numeric"],2],["The store works in:",["E-commerce","Stock markets","Logistics","Government"],0]]],["A company collects data from many sources in different formats. Some records are wrong, the data keeps growing, and it must be protected from unauthorized access.",[["Wrong records are a ___ challenge:",["Data security","Data integration","Data quality","Tool selection"],2],["Protecting data from unauthorized access is:",["Data security and privacy","Data quality","Data integration","Rapid growth"],0],["Combining different data formats is:",["Data quality","Data integration","Data security","Visualization"],1],["Keeping systems fast as data grows is:",["Rapid growth of data","Data quality","Tool selection","Privacy"],0]]],["A company keeps customer data in tables managed by MySQL. Another team stores social media data as key-value pairs using MongoDB.",[["MySQL is a:",["NoSQL DBMS","Sensor","Relational DBMS","Chatbot"],2],["Data kept in tables is in a:",["Relational database","Non-relational database","Graph","Key-value store"],0],["MongoDB is a:",["Relational DBMS","NoSQL DBMS","Spreadsheet","Browser"],1],["Key-value pairs are stored in:",["Relational databases","Paper files","Non-relational databases","Charts"],2]]]];
+const Q=N.map(q=>({q:q[0],o:q[1],a:q[2]}));
+S.forEach((s,i)=>s[1].forEach(q=>Q.push({q:q[0],o:q[1],a:q[2],sc:s[0],sn:i+1})));
+const $=id=>document.getElementById(id),L="ABCD";
+let cur=0,ans=[],name="",roll="",review=false;
+const show=id=>["start","quiz","res"].forEach(s=>$(s).classList.toggle("hide",s!==id));
+
+$("go").onclick=()=>{
+  name=$("nm").value.trim();roll=$("rl").value.trim();
+  if(!name||!roll){$("err").textContent="Please enter both your name and roll number.";return}
+  $("err").textContent="";ans=Array(Q.length).fill(null);cur=0;review=false;
+  $("who").textContent="👤 "+name+" · Roll "+roll;show("quiz");draw();
+};
+function score(){return ans.filter((a,i)=>a===Q[i].a).length}
+function draw(){
+  const q=Q[cur],a=ans[cur];
+  $("tag").textContent=(q.sc?"SCENARIO "+q.sn+" · ":"")+"QUESTION "+(cur+1)+" OF "+Q.length;
+  $("scn").classList.toggle("hide",!q.sc);if(q.sc)$("stx").textContent=q.sc;
+  $("qt").textContent=q.q;
+  $("ops").innerHTML="";
+  q.o.forEach((t,i)=>{
+    const b=document.createElement("button");b.className="opt";b.innerHTML="<b>"+L[i]+"</b><span></span>";b.lastChild.textContent=t;
+    if(a!==null){b.disabled=true;if(i===q.a)b.classList.add("ok");else if(i===a)b.classList.add("no")}
+    b.onclick=()=>{ans[cur]=i;draw()};$("ops").appendChild(b);
+  });
+  const fb=$("fb");fb.classList.toggle("hide",a===null);
+  if(a!==null){const ok=a===q.a;fb.className="fb "+(ok?"ok":"no");
+    fb.textContent=ok?"✅ Correct! Well done.":"❌ Wrong. Correct answer: "+L[q.a]+") "+q.o[q.a]}
+  $("sc").textContent="Score "+score();
+  $("pb").style.width=(ans.filter(x=>x!==null).length/Q.length*100)+"%";
+  $("pv").style.visibility=cur?"visible":"hidden";
+  $("nx").textContent=cur===Q.length-1?"Finish ✓":"Next →";
+  $("nx").disabled=a===null&&!review;$("nx").style.opacity=$("nx").disabled?.5:1;
+  drawIdx();
+}
+function drawIdx(){
+  let h='<h3>QUESTIONS 1–'+N.length+'</h3><div class="grid">';
+  Q.forEach((q,i)=>{
+    if(i===N.length)h+='</div><h3>🧩 SCENARIO BASED · '+(N.length+1)+'–'+Q.length+'</h3><div class="grid">';
+    const c=ans[i]===null?"":ans[i]===q.a?"c":"w";
+    h+='<button data-i="'+i+'" class="'+c+(i===cur?" cur":"")+'">'+(i+1)+'</button>';
+  });
+  h+='</div><div class="legend"><span>🟩 Correct</span><span>🟥 Wrong</span><span>⬜ Not answered</span></div>';
+  $("idx").innerHTML=h;
+  $("idx").querySelectorAll("button").forEach(b=>b.onclick=()=>{cur=+b.dataset.i;draw()});
+}
+$("ix").onclick=()=>$("idx").classList.toggle("hide");
+$("pv").onclick=()=>{cur--;draw()};
+$("nx").onclick=()=>{if(cur<Q.length-1){cur++;draw()}else finish()};
+function finish(){
+  const s=score(),t=Q.length,p=Math.round(s/t*100);
+  $("rn").textContent=name;$("rr").textContent="Roll No: "+roll;$("pc").textContent=p+"%";
+  $("ring").style.setProperty("--p",p);
+  $("sa").textContent=s;$("sb").textContent=ans.filter((a,i)=>a!==null&&a!==Q[i].a).length;$("sct").textContent=t;
+  const m=p>=90?["🌟 Outstanding!","You have mastered Chapter 4."]:p>=75?["🎉 Great job!","Just a little more practice for full marks."]:p>=50?["👍 Good effort!","Revise the topics you missed and try again."]:["💪 Keep practicing!","Read the chapter once more and retry. You can do it!"];
+  $("ms").textContent=m[0];$("ms2").textContent=m[1];show("res");window.scrollTo(0,0);
+}
+$("rv").onclick=()=>{review=true;cur=0;show("quiz");draw()};
+$("rs").onclick=()=>{$("nm").value="";$("rl").value="";show("start")};
+</script>
+</body>
+</html>
